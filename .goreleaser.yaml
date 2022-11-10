@@ -1,6 +1,6 @@
 builds:
   - binary: score-compose
-    main: ./cli/
+    main: ./cli/cmd/
     goos:
       - darwin
       - linux
@@ -24,11 +24,9 @@ brews:
     tap:
       owner: rachfop
       name: homebrew-score
-      branch: main
     commit_author:
       name: rachfop
       email: prachford@icloud.com
-    license: "Apache 2.0"
 
 checksum:
   name_template: "checksums.txt"
