@@ -14,24 +14,6 @@ builds:
       - CGO_ENABLED=0
     flags:
       - -mod=vendor
-  - id: score-compose
-    binary: score-compose
-    main: ./cli
-    ldflags:
-      - -X github.com/score-spec/score-compose/internal/version.Version={{ .Version }}
-      - -X github.com/score-spec/score-compose/internal/version.BuildTime={{ .CommitDate }}
-      - -X github.com/score-spec/score-compose/internal/version.GitSHA={{ .FullCommit }}
-    env:
-      - CGO_ENABLED=0
-    targets:
-      - linux_amd64_v1
-      - linux_arm64
-      - windows_amd64_v1
-      - darwin_amd64_v1
-      - darwin_arm64
-
-release:
-  prerelease: auto
 
 brews:
   - name: score-compose
