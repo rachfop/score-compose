@@ -1,5 +1,5 @@
 builds:
-  - binary: score
+  - binary: score-compose
     main: ./cli/
     goos:
       - darwin
