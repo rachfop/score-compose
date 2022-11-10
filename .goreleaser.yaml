@@ -1,5 +1,6 @@
 builds:
   - binary: score
+    main: ./cli/
     goos:
       - darwin
       - linux
