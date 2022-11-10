@@ -33,8 +33,6 @@ builds:
 release:
   prerelease: auto
 
-universal_binaries:
-  - replace: true+
 brews:
   - name: score-compose
     homepage: "https://github.com/rachfop/score-compose"
