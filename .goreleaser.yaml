@@ -1,6 +1,6 @@
 builds:
   - binary: score-compose
-    main: ./cli/cmd/
+    main: ./cli/
     goos:
       - darwin
       - linux
