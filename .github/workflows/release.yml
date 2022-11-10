@@ -20,9 +20,9 @@ jobs:
           go-version: 1.17
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
-        with:
+      with:
           distribution: goreleaser
-          version: ${{ env.GITHUB_REF_NAME }}
-          args: release --rm-dist
+          version: latest
+          args: release --auto-snapshot --rm-dir
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
