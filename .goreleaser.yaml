@@ -3,7 +3,7 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - id: score-compose
+  - id: score-compose-release
     binary: score-compose
     main: ./cli
     ldflags:
@@ -30,8 +30,6 @@ archives:
   - format_overrides:
       - goos: windows
         format: zip
-    flags:
-      - -mod=vendor
 
 release:
   prerelease: auto
@@ -40,7 +38,7 @@ universal_binaries:
   - replace: true
 
 brews:
-  - name: score-compose
+  - name: score-compose-brew
     homepage: "https://score.dev"
     tap:
       owner: score-spec
@@ -59,4 +57,3 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
-  name_template: "checksums.txt"
