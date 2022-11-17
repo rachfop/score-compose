@@ -36,7 +36,7 @@ brews:
   - name: score-compose
     homepage: "https://score.dev"
     tap:
-      owner: score-spec
+      owner: rachfop
       name: homebrew-tap
     commit_author:
       name: rachfop
