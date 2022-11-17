@@ -1,6 +1,6 @@
 module github.com/score-spec/score-compose
 
-go 1.19
+go 1.17
 
 require (
 	github.com/compose-spec/compose-go v1.6.0
