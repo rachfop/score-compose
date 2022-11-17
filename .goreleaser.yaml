@@ -3,21 +3,13 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - id: score-compose-release
+  - id: score-compose
     binary: score-compose
     main: ./cli
     ldflags:
       - -X github.com/score-spec/score-compose/internal/version.Version={{ .Version }}
       - -X github.com/score-spec/score-compose/internal/version.BuildTime={{ .CommitDate }}
       - -X github.com/score-spec/score-compose/internal/version.GitSHA={{ .FullCommit }}
-  - binary: score-compose
-    main: ./cli/
-    goos:
-      - darwin
-      - linux
-    goarch:
-      - amd64
-      - arm64
     env:
       - CGO_ENABLED=0
     targets:
@@ -30,23 +22,6 @@ archives:
   - format_overrides:
       - goos: windows
         format: zip
-
-release:
-  prerelease: auto
-
-universal_binaries:
-  - replace: true
-
-brews:
-  - name: score-compose-brew
-    homepage: "https://score.dev"
-    tap:
-      owner: score-spec
-      name: homebrew-tap
-    commit_author:
-      name: rachfop
-      email: prachford@icloud.com
-
 checksum:
   name_template: "checksums.txt"
 snapshot:
@@ -57,3 +32,12 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
+brews:
+  - name: score-compose
+    homepage: "https://score.dev"
+    tap:
+      owner: score-spec
+      name: homebrew-tap
+    commit_author:
+      name: rachfop
+      email: prachford@icloud.com

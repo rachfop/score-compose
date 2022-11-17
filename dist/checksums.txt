@@ -1,3 +1,0 @@
-12a96d3e550ac550dc682f7b674ddacfae374e39fad5d3ed4ac52dd9136ce22a  score-compose_0.4-SNAPSHOT-44d7e88_linux_amd64.tar.gz
-384ab46dadf8fd834ec906d8a74434caf18dcd44b420c4ec18489115e87d4de2  score-compose_0.4-SNAPSHOT-44d7e88_darwin_all.tar.gz
-e3d841e5f91d4012b06d4febe2e114b40677263a68e077fe857cb3388a627760  score-compose_0.4-SNAPSHOT-44d7e88_linux_arm64.tar.gz
