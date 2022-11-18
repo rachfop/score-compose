@@ -34,10 +34,10 @@ changelog:
       - "^test:"
 brews:
   - name: score-compose
-    homepage: "https://score.dev"
+    homepage: "https://github.com/rachfop/score-compose"
     tap:
       owner: rachfop
-      name: homebrew-tap
+      name: homebrew-score
     commit_author:
       name: rachfop
       email: prachford@icloud.com
